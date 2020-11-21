@@ -15,7 +15,7 @@ def withdraw(balance, money):
 
 def withdraw_night(balance, money):
     commission = 100
-    return commission, balance - money - commission
+    return commission, balance - money - commission # tuple 반환
 
 balance = 0
 balance = deposit(balance, 3000)
@@ -24,3 +24,12 @@ print(balance)
 
 commission, balance = withdraw_night(balance, 500)
 print("수수료 {0} 원이며, 잔액은 {1} 원입니다." .format(commission, balance))
+
+#기본값
+def profile(name, age=17, main_lang="파이썬"):
+    print("이름: {0}\t나이 : {1}\t주 사용 언어: {2}" \
+        .format(name, age, main_lang))
+
+profile("유재석",20,"파이썬")
+profile("김태호")
+profile(main_lang="자바", age=25, name="김태호")
